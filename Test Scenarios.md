@@ -23,11 +23,35 @@ Authentication and validation behavior testing.
 
 | Scenario ID | Description |
 |-|-|
-| TS-01 | User should be able to login with valid credentials |
-| TS-02 | Login should fail with incorrect password |
-| TS-03 | Login should not be possible with empty input fields |
-| TS-04 | "Forgot Password" link should redirect correctly |
-| TS-05 | Proper error message should be displayed for invalid login attempts |
+| TS-01 | İstifadəçi valid məlumatlarla sistemə login edə bilməlidir |
+| TS-02 | İnvalid şifrə daxil edildikdə login mümkün olmamalıdır |
+| TS-03 | Boş input sahələri ilə login mümkün olmamalıdır |
+| TS-04 | “Forgot Password” linki düzgün səhifəyə yönləndirməlidir |
+| TS-05 | İnvalid məlumat daxil edildikdə düzgün xəta mesajı göstərilməlidir |
+
+## Credit Calculator – Test Scenarios
+
+Business logic and input validation testing.
+
+| Scenario ID | Description |
+|-|-|
+| TS-06 | Düzgün məbləğ və müddət daxil edildikdə düzgün hesablanma aparılmalıdır |
+| TS-07 | 0 və ya mənfi dəyər daxil edildikdə xəta mesajı göstərilməlidir |
+| TS-08 | Limitdən artıq məbləğ daxil edildikdə xəbərdarlıq göstərilməlidir |
+| TS-09 | Hesablama nəticəsi UI-də düzgün formatda göstərilməlidir |
+
+
+## Search Function – Test Scenarios
+
+Check out the site's internal search function
+
+| Scenario ID | Description 
+ |-|-|
+| TS-10 | Mövcud məhsul və ya xidmət adı yazıldıqda uyğun nəticə göstərilməlidir |
+| TS-11 | Böyük və kiçik hərflərlə yazıldıqda nəticə dəyişməməlidir |
+| TS-12 | Xüsusi simvollar daxil edildikdə sistem xəta verməməlidir |
+| TS-13 | Boş axtarış sorğusu zamanı sistem uyğun mesaj göstərməlidir |
+
 
 
 
