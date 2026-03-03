@@ -1,68 +1,56 @@
-# QA Checklist -Kapital Bank 
+# QA Checklist – Kapital Bank (Practice Project)
 
-----
-## Qeyd: Bu checklist tədri və portfolio üçün hazırlanmışdır və real mühiti əks etdirmir.
+> Qeyd: Bu checklist tədris və portfolio məqsədilə hazırlanmışdır.
 
-## 1. Authentication Login
-- Duzgun usrename ve sifre ile giris edilir
-- validation var (istifadeci bos sahelerle daxil olmaga calisanda bu xanani doldur mesaji)
-- Yalnis sifre daxil etdikde xeberdarliq mesaji cixir
-- müəyyən vaxtdan sonra sistemden cixis etme
-- Show/Hide password işləyir
--Şifrə gizli göstərilir
-  
-## Registration 
-- Emailin formasi yoxlanilir
-- Bos sahelerde validation var
-- Butun sahelerin doldurulmagi teleb olunur
-- Sifre telebleri gosterilir
-- Sifre ve sifreni tekrar yaz bolmesinin uygunlugu yoxlanilier
-- Movcud olan hesab maili ile yeni qeydiyyata icaze vermir
-- Qeydiyyatdan sonra login etmek olur
+---
 
-## Forgot Password
-- Forgot password linki var
-- Reset password gondərilir
-- Reset linkin vaxtin bitdikdən sonra istifadə etmək olmur
-- Yeni şifrədə Qaydalar tətbiq olunur
-- Kohnə şifre ilə giriş etmək mümkün olmur 
+## Authentication – Login
 
-## İstifadəci Profili
-- Profil məlumatlari düzgün açilir
-- Şəxsi məlumatlarda duzəliş etmək olur
-- Telefon email/ gmail dəyişikliyi edərkən təsdiq tələb olunur
+| ID | Yoxlama | Nə etdim | Nəticə | Status | Qeyd |
+|-|-|-|-|-|-|
+| CL-01 | Düzgün username və şifrə ilə giriş | Valid məlumat daxil edib login etdim | Sistem dashboard-a yönləndirdi | Pass | - |
+| CL-02 | Boş sahələr üçün validation | Inputları boş buraxıb login etdim | “Bu sahə doldurulmalıdır” mesajı çıxdı | Pass | - |
+| CL-03 | Yanlış şifrə | Yanlış şifrə daxil etdim | Xəta mesajı göstərildi | Pass | - |
+| CL-04 | Session timeout | Müəyyən müddət aktivlik etmədim | Sistem avtomatik logout etdi | Pass | Təxminən 10 dəq |
+| CL-05 | Show/Hide password | Şifrə yazıb göz ikonuna klik etdim | Şifrə göstərildi/gizləndi | Pass | - |
 
-## Hesablar və kartlar 
-- Bütün hesablar düzgün siyahılanıb
-- Kartın aktiv və ya blooklu oldugu düzgün göstərilir
-- Kartı bloklayıb açmaq işləyir
-- Balans düzgün göstəilir
+---
 
-## Pul köçürmələri
-- Bank daxili köçürmələr işləyir
-- Başqa banklara köçürmələrdə problem olmur
-- Köçürmə zamani yalnıış məlumat daxil etdikdə eror mesajı çıxır
-- Komisiyalar düzgün çıxılır hesablanır
-- Köçürmə  etdikdən sonra balansda düzgün dəyişiklik edilir(duzgun pul cixilir)
-  
-## Ödənişlər 
-- Komunal ödənişlər işləyir
-- Telefon operatorları bölməsi işləyir
-- Ödənişlər tarixçədə əks olunur
-- Uğursuz ödəniş edildikdə xəta mesajı əks olunur
+## Registration
 
-## Təhlükəsizlik 
-- HTTPS dən istifadə olunur
-- Başqa cihazdan giriş edərkən doğrulama mesajının istənilməsi
-- Eyni anda iki cihazdan işlətmək qadağası qoyulub
+| ID | Yoxlama | Nə etdim | Nəticə | Status | Qeyd |
+|-|-|-|-|-|-|
+| CL- 06 | Email formatı | Yanlış formatda email daxil etdim | Validation mesajı çıxdı | Pass | - |
+| CL-07 | Boş sahə yoxlanışı | Formanı boş göndərdim | Required mesajı çıxdı | Pass | - |
+| CL-08 | Şifrə qaydaları | Qısa şifrə yazdım | Minimum tələblər göstərildi | Pass | - |
+| CL-09 | Şifrə təkrarı | Fərqli şifrələr daxil etdim | Uyğunsuzluq mesajı çıxdı | Pass | - |
+| CL-10 | Mövcud email | Mövcud email ilə qeydiyyat etdim | Sistem icazə vermədi | Pass | - |
 
-## Uİ/UX
-- Mobil və desktopda sistem düzgün açılır
-- Xəta mesajları aydın və başa düşülür
-- Dil dəyişərkən sistemdə hər şey düzgün işləyir
+---
 
-## Performance 
-- Login zamanı gecikmələr baş vermir
-- Köçürmə edərkən donma gecikmə və gözləmə müddəti olmur
-- Eyni anda bir neçə köçürmə etmək olmur
+## Pul Köçürmələri
 
+| ID | Yoxlama | Nə etdim | Nəticə | Status | Qeyd |
+|-|-|-|-|-|-|
+| CL-11 | Bank daxili köçürmə | Eyni bank hesabına pul göndərdim | Köçürmə uğurlu oldu | Pass | - |
+| CL-12 | Yanlış məlumat | Yanlış IBAN daxil etdim | Xəta mesajı çıxdı | Pass | - |
+| CL-13 | Komissiya hesablanması | Köçürmə etdikdə komissiyanı yoxladım | Komissiya düzgün çıxıldı | Pass | - |
+| CL-14 | Balans dəyişməsi | Köçürmə sonrası balansı yoxladım | Düzgün məbləğ çıxıldı | Pass | - |
+
+---
+
+## Təhlükəsizlik
+
+| ID | Yoxlama | Nə etdim | Nəticə | Status | Qeyd |
+|-|-|-|-|-|-|
+| CL-15 | HTTPS istifadəsi | URL-i yoxladım | HTTPS aktiv idi | Pass | SSL mövcuddur |
+| CL-16 | Yeni cihazdan giriş | Başqa brauzerdən login etdim | Təsdiq kodu tələb olundu | Pass | - |
+
+---
+
+## UI/UX
+
+| ID | Yoxlama | Nə etdim | Nəticə | Status | Qeyd |
+|-|-|-|-|-|-|
+| CL-17 | Mobil uyğunluq | Mobile view-da yoxladım | UI düzgün açıldı | Pass | - |
+| CL-18 | Dil dəyişmə | Dil dəyişdirdim | Bütün mətnlər düzgün dəyişdi | Pass | - |
