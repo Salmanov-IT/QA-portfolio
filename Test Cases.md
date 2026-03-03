@@ -1,4 +1,4 @@
-# Lunikz
+# Yusif
 # QEYD: Bu Test Case lər tədris məqsədi ilə hazırlanmışdır.
 # Detailed Test Cases
 
