@@ -1,6 +1,4 @@
-#   Hi I'm Yusif
-
-## Junior QA Engineer
+# QA Engineer
 
 ## Test Strategy (KapitalBank)
 
